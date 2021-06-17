@@ -143,8 +143,6 @@ function tfj_scripts() {
 	wp_enqueue_style( 'tfj-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'tfj-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'tfj-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -170,11 +168,3 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-

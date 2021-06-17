@@ -35,3 +35,20 @@ function tfj_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'tfj_pingback_header' );
+
+/**
+* Renders the different components defined in ACF Flexible Content.
+*
+* @return void
+*/
+function tfj_render_flexible_content() {
+	$template_path = get_template_directory();
+	$acf_path = $template_path . '/inc/acf-components/';
+	
+	while ( have_rows( 'components' ) ) : the_row();
+	echo '<!-- ' . $acf_path . get_row_layout() . '.php -->';
+	include $acf_path . get_row_layout() . '.php';
+	
+	endwhile;
+	
+}
