@@ -48,12 +48,10 @@ if ( ! function_exists( 'tfj_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'tfj' ),
-			)
-		);
-
+		register_nav_menus (array(
+			'primary' => 'Primary Menu',
+		));
+		
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -100,6 +98,21 @@ if ( ! function_exists( 'tfj_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		/**
+		 * Theme Options
+		 */
+
+		if ( function_exists( 'acf_add_options_page' ) ) {
+			acf_add_options_page(array(
+				'page_title'    => __('Theme General Settings'),
+				'menu_title'    => __('Theme Settings'),
+				'menu_slug'     => 'theme-general-settings',
+				'capability'    => 'edit_posts',
+				'redirect'      => false
+			));
+		}
+
 	}
 endif;
 add_action( 'after_setup_theme', 'tfj_setup' );
@@ -140,12 +153,11 @@ add_action( 'widgets_init', 'tfj_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tfj_scripts() {
-	wp_enqueue_style( 'tfj-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'tfj-style', 'rtl', 'replace' );
+  wp_enqueue_style( 'tfj-styles', get_stylesheet_directory_uri() . '/build/css/style.min.css' );
+	
+	wp_enqueue_script('load-fa', 'https://kit.fontawesome.com/e785bdc78c.js');
+	wp_enqueue_script('boostrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array('jquery'), '20210502', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'tfj_scripts' );
 
@@ -168,3 +180,13 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/** 
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+?>
