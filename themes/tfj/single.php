@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying archive pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package tfj
  */
@@ -10,31 +10,24 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'tfj' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'tfj' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
+<main id="primary" class="site-main container">
+	<div class="row">
+		<div class="col-lg-9 main-content border">
+			<div class="header">
+				<h2><?php the_title(); ?></h2>
+				<div class="post-details">
+					<h5><?php echo get_the_author_meta('display_name', 1); ?></h5>
+					<h6><?php echo the_date(); ?></h5>
+				</div>
+			</div>
+			<div class="body">
+				<?php the_content(); ?>
+			</div>
+		</div>
+		<div class="col-lg-3 sidebar border">
+			<?php get_sidebar();?>
+		</div>
+	</div>
+</main><!-- #main -->
 <?php
-get_sidebar();
 get_footer();
