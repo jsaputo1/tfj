@@ -18,28 +18,60 @@ header {
     }
   }
   .hero-header {
+    > .row {
+      @include media-breakpoint-down(lg) {
+        flex-direction: column-reverse;
+      }
+    }
+
     .left {
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
       color: $primary;
+      @include media-breakpoint-down(lg) {
+        padding-bottom: 50px;
+        justify-content: center;
+      }
+      @include media-breakpoint-down(sm) {
+        align-items: center;
+      }
       h2 {
         font-family: "Bebas Neue";
         font-size: 3rem;
       }
+      h4 {
+        @include media-breakpoint-down(sm) {
+          text-align: center;
+        }
+      }
       .footer {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         padding-top: 15px;
+        @include media-breakpoint-down(sm) {
+          justify-content: center;
+        }
         .btn {
           font-weight: 600;
           width: 200px;
-          margin-right: 15px;
+          @include media-breakpoint-up(sm) {
+            margin-right: 15px;
+          }
         }
         .icon-list {
           display: flex;
+          @include media-breakpoint-down(sm) {
+            justify-content: space-between;
+            width: 200px;
+            padding-top: 25px;
+          }
           .nav-link {
+            @include media-breakpoint-down(sm) {
+              padding: 0;
+            }
             .icon {
               width: 24px;
               height: 24px;
@@ -58,21 +90,33 @@ header {
       }
     }
   }
-  .navbar {
+  nav {
     background-color: $primary;
     color: $white;
-    .nav-link {
-      color: $gray-400;
-      padding-left: unset !important;
-      padding-right: unset !important;
-      margin-right: 25px;
-      font-weight: 600;
-    }
-    .current-menu-item {
-      .nav-link {
-        border-bottom: 2px solid $white;
-        padding-bottom: 10px;
-        color: $white;
+    .menu-primary-container {
+      .menu {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        padding: 15px 0;
+        @include media-breakpoint-down(sm) {
+          justify-content: center;
+        }
+        .menu-item {
+          a {
+            color: $gray-400;
+            margin-right: 25px;
+            font-weight: 600;
+            text-decoration: none;
+          }
+        }
+        .current-menu-item {
+          a {
+            border-bottom: 2px solid $white;
+            padding-bottom: 10px;
+            color: $white;
+          }
+        }
       }
     }
   }

@@ -25,10 +25,12 @@ get_header();
 			foreach ( $latest_posts as $post ) : setup_postdata( $post ); 
 				?>
 				<div class="card row">
-					<div class="col-lg-3">
-						<a href="<?php echo the_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
+					<div class="col-md-3">
+						<figure>
+							<a href="<?php echo the_permalink(); ?>"><?php echo get_the_post_thumbnail(); ?></a>
+						</figure>
 					</div>
-					<div class="col-lg-9 body">
+					<div class="col-md-9 body">
 						<div class="header">
 							<h6><?php print_r( get_the_category()[0]->name );?></h6>
 							<a href="<?php echo the_permalink(); ?>">

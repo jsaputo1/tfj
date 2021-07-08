@@ -8,6 +8,11 @@
     .card {
       border-bottom: 2px solid $light;
       padding: 18px;
+      @include media-breakpoint-up(sm) {
+        figure {
+          max-width: 200px;
+        }
+      }
       .attachment-post-thumbnail {
         width: 100%;
         height: auto;

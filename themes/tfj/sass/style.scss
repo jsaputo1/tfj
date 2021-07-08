@@ -30,9 +30,9 @@ Version: 1.0.0
 // @import "./node_modules/bootstrap/scss/custom-forms";
 @import "./node_modules/bootstrap/scss/nav";
 @import "./node_modules/bootstrap/scss/navbar";
-@import "./node_modules/bootstrap/scss/card";
+// @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/breadcrumb";
-@import "./node_modules/bootstrap/scss/pagination";
+// @import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/jumbotron";
 // @import "./node_modules/bootstrap/scss/alert";
@@ -49,6 +49,9 @@ Version: 1.0.0
 // @import "./node_modules/bootstrap/scss/bootstrap";
 
 @import "header";
+@import "sidebar";
+
+@import "pages/home";
 
 @import "global";
 @import "typography";

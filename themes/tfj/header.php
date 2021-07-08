@@ -54,24 +54,11 @@
 			</div>
 		</div>
 	</div>
-	<nav class="navbar navbar-expand-lg" role="navigation">
+	<nav>
 		<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-nav-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-				</button>
-					<?php
-					wp_nav_menu( array(
-							'theme_location'    => 'primary',
-							'depth'             => 1,
-							'container'         => 'div',
-							'container_class'   => 'collapse navbar-collapse',
-							'container_id'      => 'primary-nav-menu',
-							'menu_class'        => 'nav navbar-nav',
-							'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-							'walker'            => new WP_Bootstrap_Navwalker(),
-					) );
-					?>
+			<?php wp_nav_menu(array(
+			'theme_location' => 'primary'
+				)) ;?>  
 		</div>
 	</nav>
 </header>
