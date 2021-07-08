@@ -34,18 +34,18 @@
 				<div class="footer">
 					<a class="btn btn-primary" href="#">Subscribe</a>
 					<div class="icon-list">
-					<?php 
-					while (have_rows( 'social_links', 'option' )):
-						the_row();
-						foreach (get_sub_field( 'links', 'option' ) as $link): 
-						?>
-							<a class="nav-link" href="<?php echo $link['link']; ?>" target="_blank">
-								<img src="<?php echo get_template_directory_uri() . '/assets/images/'?><?php echo $link['icon']; ?>-dark.svg" alt="<?php echo $link['icon']; ?>" class="icon">
-							</a>
 						<?php 
-						endforeach;
-					endwhile;
-					?>
+						while (have_rows( 'social_links', 'option' )):
+							the_row();
+							foreach (get_sub_field( 'links', 'option' ) as $link): 
+							?>
+								<a class="nav-link" href="<?php echo $link['link']; ?>" target="_blank">
+									<img src="<?php echo get_template_directory_uri() . '/assets/images/'?><?php echo $link['icon']; ?>-dark.svg" alt="<?php echo $link['icon']; ?>" class="icon">
+								</a>
+							<?php 
+							endforeach;
+						endwhile;
+						?>
 					</div>
 				</div>
 			</div>

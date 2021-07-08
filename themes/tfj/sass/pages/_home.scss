@@ -21,7 +21,7 @@
       .body {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         .header {
           h6 {
             color: $gray-700;

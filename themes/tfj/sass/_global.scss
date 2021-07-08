@@ -31,6 +31,7 @@ body {
     @include media-breakpoint-down(lg) {
       display: none;
     }
+    margin-bottom: 50px;
   }
 }
 

@@ -14,6 +14,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <aside id="secondary">
 	<div class="twitter-feed">
-		<a class="twitter-timeline" href="https://twitter.com/TheFantasyJones?ref_src=twsrc%5Etfw">Tweets by TheFantasyJones</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+		<a class="twitter-timeline" href="https://twitter.com/TheFantasyJones?ref_src=twsrc%5Etfw" data-tweet-limit="3">Tweets by TheFantasyJones</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 	</div>
 </aside><!-- #secondary -->
