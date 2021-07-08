@@ -2,19 +2,19 @@ header {
   background-color: $light;
   .top-header {
     background-color: $primary;
-      ul {
-        display: flex;
-        justify-content: flex-end;
-        list-style: none;
-        .nav-link {
-          &:hover {
-            opacity: 0.8;
-          }
-          .icon {
-            width: 24px;
-            height: 24px;
-          }
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      .nav-link {
+        &:hover {
+          opacity: 0.8;
         }
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
   .hero-header {
@@ -25,7 +25,7 @@ header {
       flex-direction: column;
       color: $primary;
       h2 {
-        font-family: 'Bebas Neue';
+        font-family: "Bebas Neue";
         font-size: 3rem;
       }
       .footer {
@@ -68,6 +68,7 @@ header {
       padding-left: unset !important;
       padding-right: unset !important;
       margin-right: 25px;
+      font-weight: 600;
     }
     .current-menu-item {
       .nav-link {
