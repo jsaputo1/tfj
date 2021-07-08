@@ -54,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-	<nav class="navbar navbar-expand-lg navbar-light" role="navigation">
+	<nav class="navbar navbar-expand-lg" role="navigation">
 		<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary-nav-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
