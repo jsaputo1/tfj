@@ -9,7 +9,29 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Roboto';
+  font-family: "Roboto";
+  background-color: $light;
+}
+
+.site-main {
+  margin: 0 auto;
+  padding-top: 25px;
+  .border {
+    background-color: $white;
+    border: 1px solid $primary;
+  }
+  .main-content {
+    @include media-breakpoint-up(lg) {
+      width: 73%;
+      margin-right: 2%;
+    }
+    height: 100%;
+  }
+  .sidebar {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
 }
 
 .btn {
@@ -17,5 +39,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }

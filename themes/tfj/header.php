@@ -22,8 +22,8 @@
 				</li>
 			<?php 
 			endforeach;
-			endwhile;
-			?>
+		endwhile;
+		?>
 		</ul>
 	</div>
 	<div class="hero-header container">
@@ -44,8 +44,8 @@
 							</a>
 						<?php 
 						endforeach;
-						endwhile;
-						?>
+					endwhile;
+					?>
 					</div>
 				</div>
 			</div>
