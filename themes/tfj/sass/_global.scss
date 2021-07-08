@@ -1,0 +1,21 @@
+.span-page {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto';
+}
+
+.btn {
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans';
+}
