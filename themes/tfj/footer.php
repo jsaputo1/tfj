@@ -10,21 +10,26 @@
  */
 
 ?>
-
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tfj' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'tfj' ), 'WordPress' );
+		<div class="container">
+			<p><?php echo esc_html( (get_field( 'footer_text', 'option' ) ) ); ?></p>
+			<ul class="mb-0">
+				<?php 
+				while (have_rows( 'social_links', 'option' )):
+					the_row();
+					foreach (get_sub_field( 'links', 'option' ) as $link): 
+					?>
+						<li>
+							<a class="nav-link" href="<?php echo $link['link']; ?>" target="_blank">
+								<img src="<?php echo get_template_directory_uri() . '/assets/images/'?><?php echo $link['icon']; ?>.svg" alt="<?php echo $link['icon']; ?>" class="icon">
+							</a>
+						</li>
+					<?php 
+					endforeach;
+				endwhile;
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tfj' ), 'tfj', '<a href="http://www.johnsaputo.net">John Saputo</a>' );
-				?>
-		</div><!-- .site-info -->
+			</ul>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
