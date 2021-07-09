@@ -42,8 +42,13 @@ get_header();
 						</div>
 						<div class="footer">
 							<div class="post-details">
-								<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id', 1 ) ); ?>"><h5><?php echo get_the_author_meta('display_name', 1); ?></h5></a>
-								<h6><?php echo the_date(); ?></h5>
+								<figure>
+									<img src="<?php echo get_avatar_url( get_the_author_meta( 'id', 1 ) ); ?>">
+								</figure>
+								<div class="text">
+									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id', 1 ) ); ?>"><h5><?php echo get_the_author_meta('display_name', 1); ?></h5></a>
+									<h6><?php echo get_the_date(); ?></h5>
+								</div>
 							</div>
 							<div class="share-links">
 								<div class="sharethis-inline-share-buttons"></div>
