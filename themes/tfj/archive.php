@@ -13,14 +13,21 @@ get_header();
 <main id="primary" class="site-main container">
 	<div class="row">
 		<div class="col-lg-9 main-content border">
-			<h2><?php echo get_the_category()[0]->name; ?></h2>
+			<h2><?php echo get_the_archive_title() ?></h2>
 			<?php
 			$cat = the_category_id( false );
-			$args = array( 
-				'post_type'   => 'post', 
-				'order'       => 'ASC',
-				'cat'    	  => $cat
-				);
+			if ( is_category() ) {  
+				$args = array( 
+					'post_type'   => 'post', 
+					'order'       => 'ASC',
+					'cat'    	  => $cat
+					);
+			} else {
+				$args = array( 
+					'post_type'   => 'post', 
+					'order'       => 'ASC',
+					);
+			}
 			$latest_posts = get_posts( $args ); 
 			?>
         	<?php 
