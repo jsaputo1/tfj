@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=60e76b8f9804b500190921a9&product=inline-share-buttons" async="async"></script>
 </head>
 <body <?php body_class();?>>
 <header>

@@ -19,9 +19,9 @@ header {
   }
   .hero-header {
     > .row {
-      @include media-breakpoint-down(lg) {
-        flex-direction: column-reverse;
-      }
+      // @include media-breakpoint-down(lg) {
+      //   flex-direction: column-reverse;
+      // }
     }
 
     .left {
@@ -32,11 +32,13 @@ header {
       color: $primary;
       @include media-breakpoint-down(lg) {
         padding-bottom: 50px;
+        padding-top: 50px;
         justify-content: center;
       }
       @include media-breakpoint-down(sm) {
         align-items: center;
       }
+      
       h2 {
         font-family: "Bebas Neue";
         font-size: 3rem;
@@ -92,8 +94,11 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
       img {
-        width: 100%;
+        max-width: 500px;
       }
     }
   }
@@ -108,6 +113,7 @@ header {
         padding: 15px 0;
         @include media-breakpoint-down(sm) {
           justify-content: center;
+          margin-bottom: 0;
         }
         .menu-item {
           a {
