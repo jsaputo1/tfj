@@ -17,7 +17,7 @@ get_header();
 			<?php
 			$args = array( 
 				'post_type'   => 'post', 
-				'order'       => 'ASC',
+				'order'       => 'DESC',
 				);
 			$latest_posts = get_posts( $args ); 
 			?>
@@ -42,10 +42,10 @@ get_header();
 						<div class="footer">
 							<div class="post-details">
 								<figure>
-									<img src="<?php echo get_avatar_url( get_the_author_meta( 'id', 1 ) ); ?>">
+									<img src="<?php echo get_avatar_url( get_the_author_meta( 'id' ) ); ?>">
 								</figure>
 								<div class="text">
-									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id', 1 ) ); ?>"><h5><?php echo get_the_author_meta('display_name', 1); ?></h5></a>
+									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id' ) ); ?>"><h5><?php echo get_the_author_meta('display_name', 1); ?></h5></a>
 									<h6><?php echo get_the_date(); ?></h5>
 								</div>
 							</div>

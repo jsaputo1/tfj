@@ -16,16 +16,23 @@ get_header();
 			<h2><?php echo get_the_archive_title() ?></h2>
 			<?php
 			$cat = the_category_id( false );
+			$tag = get_the_archive_title();
 			if ( is_category() ) {  
 				$args = array( 
 					'post_type'   => 'post', 
-					'order'       => 'ASC',
+					'order'       => 'DESC',
 					'cat'    	  => $cat
 					);
-			} else {
+			} elseif ( is_author() ) {
 				$args = array( 
 					'post_type'   => 'post', 
-					'order'       => 'ASC',
+					'order'       => 'DESC',
+					);
+			}  elseif ( is_tag() ) {
+				$args = array( 
+					'post_type'   => 'post', 
+					'order'       => 'DESC',
+					'tag'         => $tag
 					);
 			}
 			$latest_posts = get_posts( $args ); 
@@ -51,10 +58,10 @@ get_header();
 						<div class="footer">
 							<div class="post-details">
 								<figure>
-									<img src="<?php echo get_avatar_url( get_the_author_meta( 'id', 1 ) ); ?>">
+									<img src="<?php echo get_avatar_url( get_the_author_meta( 'id' ) ); ?>">
 								</figure>
 								<div class="text">
-									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id', 1 ) ); ?>"><h5><?php echo get_the_author_meta('display_name', 1); ?></h5></a>
+									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id' ) ); ?>"><h5><?php echo get_the_author_meta('display_name', 1); ?></h5></a>
 									<h6><?php echo get_the_date(); ?></h5>
 								</div>
 							</div>

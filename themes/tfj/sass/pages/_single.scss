@@ -3,6 +3,12 @@
     @include media-breakpoint-down(sm) {
       padding-top: 0;
     }
+    .wp-block-image {
+      img {
+        object-fit: contain;
+        height: auto;
+      }
+    }
     .header {
       border-bottom: 1px solid $gray-400;
       h2 {
