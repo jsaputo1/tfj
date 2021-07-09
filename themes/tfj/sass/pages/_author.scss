@@ -1,0 +1,17 @@
+.author {
+  .site-main {
+    .card {
+      .body {
+        .footer {
+          .post-details {
+            h5 {
+              @include media-breakpoint-down(sm) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,8 +13,9 @@ get_header();
 <main id="primary" class="site-main container">
 	<div class="row">
 		<div class="col-lg-9 main-content border">
-			<h2>Activity</h2>
+			<h2><?php echo get_the_author_meta('display_name', 1); ?></h2>
 			<?php
+			$cat = the_category_id( false );
 			$args = array( 
 				'post_type'   => 'post', 
 				'order'       => 'ASC',
