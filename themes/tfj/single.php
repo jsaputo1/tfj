@@ -33,9 +33,19 @@ get_header();
 			<div class="body">
 				<?php the_content(); ?>
 			</div>
+			<div class="footer">
+				<?php $tags = get_the_tags(); 
+				foreach( $tags as $tag ) : ?>
+					<a href="<?php echo get_tag_link($tag->term_id); ?>" class="btn btn-light"><?php echo $tag->name; ?></a>
+				<?php endforeach; ?>
+			</div>
 		</div>
 		<div class="col-lg-3 sidebar border">
 			<?php get_sidebar();?>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-9">
 		</div>
 	</div>
 </main><!-- #main -->
