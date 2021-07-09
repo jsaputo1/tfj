@@ -11,11 +11,18 @@ body {
   overflow-x: hidden;
   font-family: "Roboto";
   background-color: $light;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .site-main {
   margin: 0 auto;
   padding-top: 25px;
+  padding-bottom: 25px;
   .border {
     background-color: $white;
     border: 1px solid $primary;
@@ -41,4 +48,8 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Open Sans";
+  &:hover {
+    text-decoration: none;
+  }
+
 }
