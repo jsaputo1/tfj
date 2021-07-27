@@ -30,6 +30,7 @@ uploads/
 themes/tfj/style.css
 themes/tfj/build/css
 themes/tfj/build/maps
+themes/tfj/build/js
 
 #Unwanted plugins
 plugins/duplicator/

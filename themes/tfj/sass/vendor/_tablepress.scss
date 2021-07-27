@@ -1,0 +1,14 @@
+.tablepress .sorting {
+    background-color: $primary;
+    color: white;
+
+    &:hover {
+        background-color: $primary !important;
+        color: white !important;
+    }
+}
+
+.tablepress .sorting:hover, .tablepress .sorting_asc, .tablepress .sorting_desc {
+    background-color: $primary !important;
+    color: white !important;
+}

@@ -10,6 +10,9 @@
  */
 
 ?>
+	<figure onclick="topFunction()" class="scroll-arrow">
+		<img id="scrollToTop" src="<?php echo get_template_directory_uri() . '/assets/images/arrow-up.svg'?>" />
+	</figure>
 	<footer id="colophon" class="site-footer">
 		<div class="container">
 			<p><?php echo esc_html( (get_field( 'footer_text', 'option' ) ) ); ?></p>

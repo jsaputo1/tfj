@@ -7,6 +7,10 @@
   margin-right: -50vw;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Roboto";
@@ -35,6 +39,7 @@ body {
     height: 100%;
   }
   .sidebar {
+    height: 100%;
     @include media-breakpoint-down(lg) {
       display: none;
     }
@@ -52,4 +57,14 @@ body {
     text-decoration: none;
   }
 
+}
+
+.underline-link {
+  a {
+    text-decoration: underline;
+  }
+}
+
+.show {
+  display: block;
 }
