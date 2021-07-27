@@ -33,7 +33,7 @@
 				<h2><?php echo esc_html((get_field( 'header_title', 'option' ) )); ?></h2>
 				<h4><?php echo esc_html((get_field( 'header_subtitle', 'option' ) )); ?></h4>
 				<div class="footer">
-					<a class="btn btn-primary" href="#">Subscribe</a>
+					<a class="btn btn-primary" href="https://open.spotify.com/show/3b87E9mF7d0IyQIFfmpFmC" target="_blank">Subscribe</a>
 					<div class="icon-list">
 						<?php 
 						while (have_rows( 'social_links', 'option' )):

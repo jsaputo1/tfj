@@ -18,7 +18,7 @@ get_header();
 					<h2><?php the_title(); ?></h2>
 					<div class="header-bottom">
 						<div class="post-details">
-						<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id' ) ); ?>"><h5><?php echo get_the_author_meta( 'display_name', 1 ); ?></h5></a>
+						<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id' ) ); ?>"><h5><?php echo get_the_author_meta( 'display_name' ); ?></h5></a>
 							<figure>
 								<a href="<?php echo get_the_author_meta( 'url', 1 ); ?>" target="blank">
 									<img src="<?php echo get_template_directory_uri() . '/assets/images/twitter-blue.svg'?>" />
@@ -51,7 +51,7 @@ get_header();
 									<img src="<?php echo get_avatar_url( get_the_author_meta( 'id' ) ); ?>">
 								</figure>
 								<div class="text">
-									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id' ) ); ?>"><h5><?php echo get_the_author_meta('display_name' ); ?></h5></a>
+									<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id' ) ); ?>"><h5><?php echo get_the_author_meta('display_name'); ?></h5></a>
 									<a href="<?php echo get_the_author_meta( 'url' ); ?>" target="blank">
 										<span>
 											<h6>Follow on Twitter</h6>
