@@ -14,6 +14,7 @@
       padding: 18px;
       @include media-breakpoint-down(sm) {
         padding: 0;
+        align-items: center;
       }
       @include media-breakpoint-up(sm) {
         figure {
@@ -25,6 +26,9 @@
           padding-right: 0;
         }
       }
+      figure {
+        margin-bottom: 0;
+      }
       .attachment-post-thumbnail {
         width: 100%;
         height: auto;
@@ -33,6 +37,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        @include media-breakpoint-down(sm) {
+          padding: 10px;
+        }
         .header {
           h6 {
             color: $gray-700;
@@ -48,6 +55,7 @@
             }
             @include media-breakpoint-down(sm) {
               font-size: 14px;
+              font-weight: 700;
             }
           }
           p {
@@ -84,6 +92,7 @@
               width: 28px;
               height: 28px;
               margin-right: 8px;
+              margin-bottom: 0;
               @include media-breakpoint-down(sm) {
                 display: none;
               }
@@ -100,6 +109,8 @@
                 margin-bottom: 4px;
                 @include media-breakpoint-down(sm) {
                   font-size: 12px;
+                  font-weight: 400;
+                  font-style: italic;
                 }
               }
               h6 {

@@ -34,20 +34,20 @@
 				<h4><?php echo esc_html((get_field( 'header_subtitle', 'option' ) )); ?></h4>
 				<div class="footer">
 					<a class="btn btn-primary" href="https://open.spotify.com/show/3b87E9mF7d0IyQIFfmpFmC" target="_blank">Subscribe</a>
-					<div class="icon-list">
+					<!-- <div class="icon-list"> -->
 						<?php 
-						while (have_rows( 'social_links', 'option' )):
-							the_row();
-							foreach (get_sub_field( 'links', 'option' ) as $link): 
+						// while (have_rows( 'social_links', 'option' )):
+						// 	the_row();
+						// 	foreach (get_sub_field( 'links', 'option' ) as $link): 
 							?>
-								<a class="nav-link" href="<?php echo $link['link']; ?>" target="_blank">
+								<!-- <a class="nav-link" href="<?php echo $link['link']; ?>" target="_blank">
 									<img src="<?php echo get_template_directory_uri() . '/assets/images/'?><?php echo $link['icon']; ?>-dark.svg" alt="<?php echo $link['icon']; ?>" class="icon">
-								</a>
+								</a> -->
 							<?php 
-							endforeach;
-						endwhile;
+						// 	endforeach;
+						// endwhile;
 						?>
-					</div>
+					<!-- </div>  -->
 				</div>
 			</div>
 			<div class="col-lg-7 right">

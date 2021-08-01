@@ -153,7 +153,7 @@ add_action( 'widgets_init', 'tfj_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tfj_scripts() {
-	wp_enqueue_style( 'tfj-styles', get_stylesheet_directory_uri() . '/build/css/style.min.css', null, '0.133' );
+	wp_enqueue_style( 'tfj-styles', get_stylesheet_directory_uri() . '/build/css/style.min.css', null, '0.135' );
 	// wp_enqueue_script('load-fa', 'https://kit.fontawesome.com/e785bdc78c.js');
 	wp_enqueue_script('boostrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array('jquery'), '20210502', true );
 	wp_enqueue_script('main-js', get_stylesheet_directory_uri() . '/build/js/main.min.js', '0.1' );

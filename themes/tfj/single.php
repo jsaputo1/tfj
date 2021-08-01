@@ -20,7 +20,7 @@ get_header();
 						<div class="post-details">
 						<a href="<?php echo get_author_posts_url( get_the_author_meta( 'id' ) ); ?>"><h5><?php echo get_the_author_meta( 'display_name' ); ?></h5></a>
 							<figure>
-								<a href="<?php echo get_the_author_meta( 'url', 1 ); ?>" target="blank">
+								<a href="<?php echo get_the_author_meta( 'url' ); ?>" target="blank">
 									<img src="<?php echo get_template_directory_uri() . '/assets/images/twitter-blue.svg'?>" />
 								</a>
 							</figure>
